@@ -2,7 +2,6 @@
   "name": "mushroom-checker",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,6 +10,7 @@
     "start": "nodemon dist/app.js"
   },
   "dependencies": {
+    "@teachablemachine/image": "^0.8.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
