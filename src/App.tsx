@@ -5,6 +5,7 @@ import Layout from "./components/Layout";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './Home';
+import Mushroom from './Mushroom';
 
 
 
@@ -17,7 +18,13 @@ children: [
         path:"/",
         element: <Home/>
 
-    }
+    },
+    {
+      path:":mushroom",
+      element: <Mushroom/>
+
+  },
+
 ]
 }
 

@@ -4,6 +4,8 @@ import Carousel from "./Carousel";
 import ToggleButton from "./ToggleButton";
 import data from "../data/data"
 import { UploadedImage, ImageListProps } from "../types/customedTypes";
+import { Link } from "react-router-dom";
+
 
 
 const ImageList: React.FC<ImageListProps> = ({ images }) => {
@@ -16,22 +18,27 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
   };
 
   useEffect(() => {
+    // Function to handle resize events
     const handleResize = () => {
-      const isMobileSize = window.innerWidth <= 768;
-      setIsMobile(isMobileSize);
+      const isMobileSize = window.innerWidth <= 768;      // Check if the window width is less than or equal to 768 pixels
+      setIsMobile(isMobileSize);                          // Set the state variable isMobile with the result of the check
     };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
+  
+    handleResize();                                       // Call handleResize once to set the initial state based on the window size
+    window.addEventListener("resize", handleResize);      // Add an event listener for the "resize" event on the window
+    // Cleanup function: remove the event listener when the component is unmounted
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
+
+  // Update the predictionImages state variable when the images prop changes
+  // This will be triggered when the user uploads a new image
   useEffect(() => {
     setPredictionImages(images);
   }, [images]);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
       {predictionImages && predictionImages.length >= 2 && isMobile && (
@@ -74,12 +81,11 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
                       >
                         <p className="text-lg font-bold">
                           <span className="text-[#fff]">
-                            <h1>{item.className}</h1> 
-                            {matchingData && (
-                                <>  <span>{matchingData.description}</span>
-                                </>
-                                )}
-                               
+                            <p>{matchingData?.name}</p>
+                     
+                             <Link to={`${matchingData?.name}`}>
+                                <button className="bg-primary text-white px-2 py-1 rounded-md">Learn More</button>
+                              </Link>  
                           </span>
                         </p>
                       </div>
