@@ -38,7 +38,6 @@ const Carousel: React.FC<ImageListProps> = ({ images }) => {
                     />
                     {image.predictions.map((item, index) => {
                       if (item.probability !== 0) {
-                        
                         return (
                           <div
                             className={`flex items-center absolute bottom-0 justify-center w-full`}
