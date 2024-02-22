@@ -1,25 +1,9 @@
 import React from "react";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
+import { Options, Splide, SplideSlide } from "@splidejs/react-splide"; 
 import Image from "react-bootstrap/Image";
-
-
-
-type UploadedImage = {
-  name: string;
-  url: string;
-  predictions: ClassPrediction[];
-};
-
-type ClassPrediction = {
-  className: string;
-  probability: number | string;
-};
-
-type ImageListProps = {
-  images: UploadedImage[];
-};
+import { ImageListProps } from "../types/customedTypes";
 
 
 const options: Options = {
@@ -39,7 +23,7 @@ const Carousel: React.FC<ImageListProps> = ({ images }) => {
   return (
     <div className="">
       <div className="mx-auto">
-        <Splide options={options}>
+        <Splide options={options}> 
           {images.map((image, index) => (
             <SplideSlide key={index}>
               <div className="flex cursor-pointer relative h-[100%] max-w-[90vw] mx-auto flex-col items-center pb-8 bg-primary justify-center border border-gray-300 active:scale-90 transition duration-150">

@@ -3,20 +3,9 @@ import ImageUploadInput from "../components/ImageUploadInput";
 import ImageList from "../components/ImageList";
 import { useModel } from "../ModelProvider";
 import React from "react";
+import { ClassPrediction, UploadedImage } from "../types/customedTypes";
 
 
-type UploadedImage = {
-    name: string;
-    url: string;
-    predictions: ClassPrediction[];
-  };
-  
-type ClassPrediction = {
-    className: string;
-    probability: number | string;
-  };
-  
-  
 export default function ImageUploader() {
   const [images, setImages] = useState<UploadedImage[]>([]);
   const [imageUploaded, setImageUploaded] = useState(false);

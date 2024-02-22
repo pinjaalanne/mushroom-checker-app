@@ -12,11 +12,9 @@ export default function Header() {
               src="https://i.ibb.co/qFZpvXs/logo.png"
               width={40}
               height={40}
-            
             />
             <span className="mx-2">Mushrooms Checker</span>
-      
-           </div>
+            </div>
            </div>
     </header>
   );

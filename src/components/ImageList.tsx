@@ -3,22 +3,7 @@ import React, { useEffect, useState } from "react";
 import Carousel from "./Carousel";
 import ToggleButton from "./ToggleButton";
 import data from "../data/data"
-console.log(data)
-
-type ImageListProps = {
-  images: UploadedImage[];
-};
-type ClassPrediction = {
-  className: string;
-  probability: number | string;
-  index: number;
-};
-
-type UploadedImage = {
-  name: string;
-  url: string;
-  predictions: ClassPrediction[];
-};
+import { UploadedImage, ImageListProps } from "../types/customedTypes";
 
 
 const ImageList: React.FC<ImageListProps> = ({ images }) => {
@@ -81,8 +66,6 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
                     const matchingData = data.find(
                       (data) => data.name === item.className
                     );
-                    console.log("data", data[index].name , "item", image.predictions[index].className )
-                    console.log("prediction", image.predictions )
                   return (
                     
                       <div
@@ -91,10 +74,12 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
                       >
                         <p className="text-lg font-bold">
                           <span className="text-[#fff]">
-                            {item.className} 
+                            <h1>{item.className}</h1> 
                             {matchingData && (
-                                  <span>{matchingData.description}</span>
+                                <>  <span>{matchingData.description}</span>
+                                </>
                                 )}
+                               
                           </span>
                         </p>
                       </div>
