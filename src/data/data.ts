@@ -1,3 +1,14 @@
+import blackTrumpet from '../assets/images/blackTrumpet.jpg';
+import chanterelle from '../assets/images/chanterelle.jpeg';
+import falseMorel from '../assets/images/false_moral_pic568037.jpg';
+import flyAgaric from '../assets/images/Fly_Agaric.png';
+import hedgehogMushroom from '../assets/images/hedgehog.jpeg';
+import porcini from '../assets/images/porcini.jpg';
+import yellowfoot from '../assets/images/yellowfoot.jpg';
+import destroyingAngel from '../assets/images/Destroying_Angel.png';
+import funerallBell from '../assets/images/Funeral_Bell.png';
+import sheepPolypore from '../assets/images/Sheep_Polypore_pic.png';
+
 export interface Mushroom {
   id: string;
   name: string;
@@ -25,7 +36,7 @@ const data: Mushroom[] = [
     edible: true,
     recipes:
       'https://www.foodandwine.com/vegetables/mushrooms/chanterelle-recipes',
-    image: 'https://image.laji.fi/MM.78753/orig_13863_thumb.jpg ',
+    image: chanterelle,
   },
   {
     id: '2',
@@ -38,7 +49,7 @@ const data: Mushroom[] = [
     'primary habitat': 'Heath forests',
     edible: true,
     recipes: 'https://www.bonappetit.com/ingredient/porcini-mushroom',
-    image: 'https://www.thespruceeats.com/thmb/',
+    image: porcini,
   },
   {
     id: '3',
@@ -52,7 +63,7 @@ const data: Mushroom[] = [
     'primary habitat': 'Heath forests',
     edible: true,
     recipes: 'https://wineforest.com/pages/yellow-foot-chanterelle-soup-1',
-    image: 'https://www.thespruceeats.com/thmb/',
+    image: yellowfoot,
   },
   {
     id: '4',
@@ -64,7 +75,7 @@ const data: Mushroom[] = [
     'primary habitat': 'Mesic and herb-rich heath forests',
     edible: true,
     recipes: 'https://www.yummly.com/recipes/black-trumpet-mushrooms',
-    image: 'https://www.thespruceeats.com/thmb/',
+    image: blackTrumpet,
   },
   {
     id: '5',
@@ -78,7 +89,7 @@ const data: Mushroom[] = [
     edible: true,
     recipes:
       'https://foragerchef.com/category/wild-mushroom-recipes-2/hedgehog-mushrooms/',
-    image: 'https://www.thespruceeats.com/thmb/',
+    image: hedgehogMushroom,
   },
   {
     id: '6',
@@ -90,7 +101,7 @@ const data: Mushroom[] = [
     'primary habitat': 'Heath forests',
     edible: true,
     recipes: 'https://www.thespruceeats.com/morel-mushroom-recipes-2217133',
-    image: '',
+    image: falseMorel,
   },
   {
     id: '7',
@@ -102,7 +113,7 @@ const data: Mushroom[] = [
     'primary habitat': 'Heath forests',
     edible: false,
     recipes: '',
-    image: '',
+    image: flyAgaric,
   },
   {
     id: '8',
@@ -115,7 +126,7 @@ const data: Mushroom[] = [
     'primary habitat': 'Heath forests',
     edible: false,
     recipes: '',
-    image: '',
+    image: destroyingAngel,
   },
   {
     id: '9',
@@ -128,7 +139,7 @@ const data: Mushroom[] = [
     'primary habitat': 'Heath forests',
     edible: false,
     recipes: '',
-    image: '',
+    image: funerallBell,
   },
   {
     id: '10',
@@ -141,7 +152,7 @@ const data: Mushroom[] = [
     'primary habitat': 'Heath forests',
     edible: false,
     recipes: '',
-    image: '',
+    image: sheepPolypore,
   },
 ];
 
