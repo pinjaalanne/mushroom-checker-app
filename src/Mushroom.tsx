@@ -13,7 +13,7 @@ const Mushroom = () => {
     
         <div>
             <h1>{mushroomData?.name}</h1>
-           {/* <img src={mushroomData?.image} alt={mushroomData?.name} /> */}
+           <img src={mushroomData?.image} alt={mushroomData?.name} /> 
             <p>{mushroomData?.description}</p>
             <p>{mushroomData?.occurrence}</p>
             <p>{mushroomData?.['picking months']}</p>
