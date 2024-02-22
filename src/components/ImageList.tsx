@@ -81,7 +81,7 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
                       >
                         <p className="text-lg font-bold">
                           <span className="text-[#fff]">
-                            <p>{matchingData?.name}</p>
+                            <p>{matchingData?.name} <span className="italic">({matchingData?.scientificName})</span></p>
                      
                              <Link to={`${matchingData?.name}`}>
                                 <button className="bg-primary text-white px-2 py-1 rounded-md">Learn More</button>
