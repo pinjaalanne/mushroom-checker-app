@@ -21,7 +21,7 @@ const Mushroom = () => {
         <p>Occurence: {mushroomData?.occurrence}</p>
         <p>Picking months: {mushroomData?.["picking months"]}</p>
         <p>Primary habitat: {mushroomData?.["primary habitat"]}</p>
-        <p>Edible: {mushroomData?.edible}</p>
+        <p>Edible: {mushroomData?.edible ? "True" : "False"}</p>
         <p>Recipes: {mushroomData?.recipes}</p>
         <button onClick={() => navigate(-1)}>Return</button>
       </div>
