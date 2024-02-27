@@ -5,6 +5,7 @@ import ToggleButton from "./ToggleButton";
 import data from "../data/data"
 import { UploadedImage, ImageListProps } from "../types/customedTypes";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 
 
@@ -23,7 +24,7 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
       const isMobileSize = window.innerWidth <= 768;      // Check if the window width is less than or equal to 768 pixels
       setIsMobile(isMobileSize);                          // Set the state variable isMobile with the result of the check
     };
-  
+
     handleResize();                                       // Call handleResize once to set the initial state based on the window size
     window.addEventListener("resize", handleResize);      // Add an event listener for the "resize" event on the window
     // Cleanup function: remove the event listener when the component is unmounted
@@ -48,9 +49,9 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
         </div>
       )}
       {predictionImages &&
-      predictionImages.length >= 2 &&
-      isMobile &&
-      carouselActivate ? (
+        predictionImages.length >= 2 &&
+        isMobile &&
+        carouselActivate ? (
         <Carousel images={predictionImages} />
       ) : (
         predictionImages?.map((image, index) => (
@@ -67,14 +68,14 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
                   height={400}
                   className="max-h-[250px] object-contain"
                 />
-             
+
                 {image.predictions.map((item, index) => {
                   if (item.probability !== 0) {
                     const matchingData = data.find(
                       (data) => data.name === item.className
                     );
-                  return (
-                    
+                    return (
+
                       <div
                         className={`flex items-center absolute bottom-0 justify-center w-full`}
                         key={index}
@@ -82,10 +83,10 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
                         <p className="text-lg font-bold">
                           <span className="text-[#fff]">
                             <p>{matchingData?.name} <span className="italic">({matchingData?.scientificName})</span></p>
-                     
-                             <Link to={`${matchingData?.name}`}>
-                                <button className="bg-primary text-white px-2 py-1 rounded-md">Learn More</button>
-                              </Link>  
+
+                            <Link to={`${matchingData?.name}`}>
+                              <Button sx={{ backgroundColor: '#d7c8c0', color: '#48362c', ":hover": { backgroundColor: '#a28778' } }}>Learn More</Button>
+                            </Link>
                           </span>
                         </p>
                       </div>

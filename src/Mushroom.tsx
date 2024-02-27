@@ -61,10 +61,10 @@ const Mushroom = () => {
                         <Typography variant="subtitle1" color="text.secondary" component="div">
                             {mushroomData?.recipes}
                         </Typography>
-                        <Button onClick={() => navigate(-1)}>Return</Button>
+                        <Button sx={{ backgroundColor: '#d7c8c0', color: '#48362c', ":hover": { backgroundColor: '#a28778' } }} onClick={() => navigate(-1)}>Return</Button>
                     </CardContent>
                 </Box>
-            </Card>
+            </Card >
         </>);
 };
 
