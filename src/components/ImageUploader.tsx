@@ -57,8 +57,8 @@ export default function ImageUploader() {
 
   return (
     <div className="max-w-[90vw] lg:max-w-[80vw] mx-auto">
-      <h1 className="text-white font-semibold my-6 text-[1.8rem] lg:w-[70vw] max-w-[1250px] mx-auto leading-tight lg:leading-snug md:text-4xl lg:text-5xl md:my-8 lg:mt-14 lg:mb-10 text-center">
-        Classify Your Mushrooms with Machine Learning
+      <h1 className="text-white font-semibold my-6 text-[1rem] lg:w-[70vw] max-w-[1250px] mx-auto lg:leading-snug md:text-3xl lg:text-3xl md:my-8 lg:mt-14 lg:mb-10 text-center">
+        Identify Your Mushrooms with Machine Learning
       </h1>
       <div>
         {!model ? (
@@ -77,15 +77,14 @@ export default function ImageUploader() {
         ) : (
           <div className="flex flex-col justify-center items-center mb-12 my-10 lg:my-16 fade-in">
             <ImageUploadInput handleImageUpload={handleImageChange} />
-            <p className="text-xs text-gray-500 mt-4 text-center w-[250px] max-w-fit">
+            <p className="text-xs text-white mt-4 text-center w-[250px] max-w-fit">
               We do not save your images. Your privacy is important to us.
             </p>
           </div>
         )}
         <div
-          className={`flex justify-center items-center ${
-            imageUploaded && "my-14"
-          }`}
+          className={`flex justify-center items-center ${imageUploaded && "my-14"
+            }`}
         >
           {imageUploaded && <div className="borders" />}
         </div>
