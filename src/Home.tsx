@@ -1,13 +1,11 @@
 import ImageUploader from "./components/ImageUploader";
-import Information from "./components/Information";
 import React from "react";
 
 export default function Home() {
   return (
     <>
-      <main className="bg-black">
+      <main className="bg-tertiary">
         <ImageUploader />
-        <Information />
       </main>
     </>
   );

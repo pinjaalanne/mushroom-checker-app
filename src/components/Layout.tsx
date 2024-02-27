@@ -24,7 +24,7 @@ export default function Layout() {
           className={`bg-primary scroll-smooth flex flex-col min-h-screen ${"fade-in"}`}
         >
           <Header />
-          <main className="flex-grow my-8 max-w-[1600px] mx-auto">
+          <main className="bg-secondary flex-grow my-8 max-w-[1600px] mx-auto">
             <Outlet />
           </main>
           <Footer />
