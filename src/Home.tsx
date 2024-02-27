@@ -5,7 +5,7 @@ import React from "react";
 export default function Home() {
   return (
     <>
-      <main className="bg-black">
+      <main className="bg-tertiary">
         <ImageUploader />
         <Information />
       </main>
