@@ -5,13 +5,8 @@
         "skipLibCheck": true,
         "module": "ESNext",
         "moduleResolution": "bundler",
-        "allowSyntheticDefaultImports": true
-    },
-    "include": [
+        "allowSyntheticDefaultImports": true,
         
-            "vite.config.ts",
-            "src/**/*.tsx",
-            "src",
-            "src/**/*.ts",
-    ]
+    },
+ 
 }

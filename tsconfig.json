@@ -1,43 +1,31 @@
 {
   "compilerOptions": {
+    "types": [
+      "vite/client"
+    ],
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react",
+    "noEmit": false,
+    "jsx": "react-jsx",
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    
- 
-  },
-  "typeRoots": [
-    "./node_modules/@types",
-    "./node_modules/@splidejs/react-splide/dist/types"
-  ],
-  "include": [
-    "vite.config.ts",
-    "src/**/*.tsx",
-    "src",  
-    "src/**/*.ts",
-],
-  "references": [
-    {
-      "path": "./tsconfig.node.json",
-      "composite": true
-    }
-  ]
+    "noImplicitAny": false,
+    "outDir": "./dist2",                               
+     "rootDir": "./src/",
+     "esModuleInterop": true,
+     "forceConsistentCasingInFileNames": true,
+}
 }
