@@ -1,7 +1,7 @@
 import ImageUploader from "./components/ImageUploader";
 import React from "react";
 
-export default function Home() {
+const Home : React.FC = () => {
   return (
     <>
       <main className="bg-tertiary">
@@ -10,3 +10,7 @@ export default function Home() {
     </>
   );
 }
+
+
+export default Home;
+

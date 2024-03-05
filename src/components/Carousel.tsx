@@ -5,7 +5,6 @@ import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
 import Image from "react-bootstrap/Image";
 import { ImageListProps } from "../types/customedTypes";
 
-
 const options: Options = {
   perPage: 1,
   start: 0,

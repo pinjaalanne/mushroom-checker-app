@@ -7,7 +7,7 @@ interface Props {
 
 // ToggleButton component is button to switch on and off the carousel view
 
-const ToggleButton = ({ value, onClick }: Props) => {
+const ToggleButton: React.FC<Props> = ({ value, onClick }: Props) => {
   const toggleClass = "transform translate-x-6";
   return (
     <button

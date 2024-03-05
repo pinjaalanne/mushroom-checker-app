@@ -4,7 +4,7 @@ interface ImageUploadProps {
   handleImageUpload: ChangeEventHandler<HTMLInputElement>;
 }
 
-const ImageUploadInput = ({ handleImageUpload }: ImageUploadProps) => {
+const ImageUploadInput : React.FC<ImageUploadProps> = ({ handleImageUpload }) => {
   return (
     <label className="block bg-white shadow-xl p-4 lg:px-6 rounded-full max-w-[260px] md:max-w-max">
       <input

@@ -3,7 +3,7 @@ import Image from "react-bootstrap/Image";
 import logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+const Header : React.FC = () =>{
   return (
     <header className="sticky top-0 z-50 bg-primary shadow-xl border-b-[1px] border-[#4b5563]">
       <div className="layout flex h-1 lg:h-16 items-center justify-between max-w-[90vw] lg:max-w-[80vw] 2xl:max-w-[1400px] mx-auto my-2">
@@ -19,3 +19,4 @@ export default function Header() {
     </header>
   );
 }
+export default Header

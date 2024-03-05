@@ -14,7 +14,7 @@ import {
 
 
 
-const Mushroom = () => {
+const Mushroom : React.FC = () => {
   const params = useParams();
   const mushroomData = data.find(
     (mushroom) => mushroom.name === params.mushroom
@@ -25,7 +25,7 @@ const Mushroom = () => {
 
   return (
     <>
-      <Card sx={{ display: "flex" , flexDirection: isMobile? "column": "row" }}>
+      <Card sx={{ display: "flex" , flexDirection: isMobile ? "column": "row" }}>
         <CardMedia
           component="img"
           sx={{ maxHeight: isMobile ? "300px" : "500px", marginLeft: "0", objectFit: "contain" }}
