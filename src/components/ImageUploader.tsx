@@ -7,23 +7,35 @@ import { ClassPrediction, UploadedImage } from "../types/customedTypes";
 
 
 export default function ImageUploader() {
+
+  // State to manage uploaded images and tracking if an image is uploaded
   const [images, setImages] = useState<UploadedImage[]>([]);
   const [imageUploaded, setImageUploaded] = useState(false);
+
+  // Accessing the machine learning model from the context
   const { model } = useModel();
 
+  // Function to predict the class of an uploaded image using the machine learning model
   const predictImage = async (image: UploadedImage) => {
+
+    // Check if the model is available
     if (!model) return;
+
+    // Create an image element and set its source
     const img = document.createElement("img");
     img.src = image?.url;
     await img.decode();
 
+    // Predict the image class using the machine learning model
     const predictions = await model.predict(img);
 
+    // Find the maximum probability among predictions
     const maxFloatValue = Math.max(
       ...predictions.map((obj) => obj.probability)
     );
-
-    const predictionData: ClassPrediction[] = predictions.map((p) => ({
+  
+    // Map predictions to custom class prediction format
+     const predictionData: ClassPrediction[] = predictions.map((p) => ({
       className: p.className,
       probability: p.probability === maxFloatValue ? p.probability : 0,
     }));
@@ -32,6 +44,7 @@ export default function ImageUploader() {
     setImageUploaded(false);
   };
 
+    // Function to handle the change event when a user selects images for upload
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files && files.length > 0) {
