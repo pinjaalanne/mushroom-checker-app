@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import ModelProvider from "./ModelProvider";
+import ModelContext from "./library/ModelContext";
 import Layout from "./components/Layout";
 
 import React from "react";
@@ -30,9 +30,9 @@ const App: FC = () => {
   ]);
 
   return (
-    <ModelProvider>
+    <ModelContext>
       <RouterProvider router={router} />
-    </ModelProvider>
+    </ModelContext>
   );
 };
 

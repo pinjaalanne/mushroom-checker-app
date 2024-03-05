@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ImageUploadInput from "../components/ImageUploadInput";
 import ImageList from "../components/ImageList";
-import { useModel } from "../ModelProvider";
+import { useModel } from "../library/ModelContext";
 import React from "react";
 import { ClassPrediction, UploadedImage } from "../types/customedTypes";
 
