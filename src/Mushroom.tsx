@@ -8,7 +8,11 @@ import {
   Typography,
   CardMedia,
   Button,
+  useTheme,
+  useMediaQuery,
 } from "@mui/material";
+
+
 
 const Mushroom = () => {
   const params = useParams();
@@ -16,13 +20,15 @@ const Mushroom = () => {
     (mushroom) => mushroom.name === params.mushroom
   );
   const navigate = useNavigate();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <>
-      <Card sx={{ display: "flex" }}>
+      <Card sx={{ display: "flex" , flexDirection: isMobile? "column": "row" }}>
         <CardMedia
           component="img"
-          sx={{ maxHeight: "500px", marginLeft: "0", objectFit: "contain" }}
+          sx={{ maxHeight: isMobile ? "300px" : "500px", marginLeft: "0", objectFit: "contain" }}
           image={mushroomData?.image}
           alt="Mushroom image"
         />

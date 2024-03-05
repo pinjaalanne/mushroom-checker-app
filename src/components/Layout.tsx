@@ -21,7 +21,7 @@ export default function Layout() {
         </div>
       ) : (
         <div
-          className={`bg-primary scroll-smooth flex flex-col min-h-screen ${"fade-in"}`}
+          className={`bg-primary scroll-smooth flex flex-col min-h-screen min-w-screen ${"fade-in"}`}
         >
           <Header />
           <main className="bg-secondary flex-grow my-8 max-w-[1600px] mx-auto">
