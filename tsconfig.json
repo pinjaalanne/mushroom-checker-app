@@ -23,7 +23,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
-    "outDir": "./dist2",                               
+    "outDir": "./compiled",                               
      "rootDir": "./src/",
      "esModuleInterop": true,
      "forceConsistentCasingInFileNames": true,
