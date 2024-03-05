@@ -10,7 +10,6 @@ export default function Header() {
         <Link to={"/"}>
           <div className="flex justify-center items-center text-white text-xl mx-1">
             <Image alt="" src={logo} width={200} height={"auto"} />
-            {/* <span className="mx-2">Mushrooms Checker</span> */}
           </div>
         </Link>
         <Link to={"/about"} className="text-white">
