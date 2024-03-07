@@ -4,6 +4,7 @@ import React, {
     useState,
     useEffect,
     ReactNode,
+    
 } from "react";
 import * as tmImage from "@teachablemachine/image";
 import { config } from "../config/config";
@@ -39,7 +40,7 @@ const ModelProvider : React.FC <Props> = ({ children }: Props) => {
             }
         };
         loadModel();
-    }, []);
+    }, [model]);
 
     return (
         <ModelContext.Provider value={{ model }}>{children}</ModelContext.Provider>
