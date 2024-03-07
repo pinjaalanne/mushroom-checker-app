@@ -1,6 +1,9 @@
 name: Node CI
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -25,5 +28,3 @@ jobs:
       - name: Build 🏗️
 
         run: npm run build
-
-   
