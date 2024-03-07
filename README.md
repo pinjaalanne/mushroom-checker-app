@@ -1,4 +1,5 @@
 # Mushroom checker
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=pinjaalanne_mushroom-checker-app&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=pinjaalanne_mushroom-checker-app)
 
 ## App for user to recognise different mushroom types
 
