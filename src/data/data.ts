@@ -21,7 +21,6 @@ export interface Mushroom {
   recipes: string;
   image: string;
 }
-[];
 
 const data: Mushroom[] = [
   {
