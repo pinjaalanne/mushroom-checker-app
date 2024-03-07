@@ -1,13 +1,11 @@
 import ImageUploader from "./components/ImageUploader";
 import React from "react";
 
-const Home : React.FC = () => {
+const Home: React.FC = () => {
   return (
-    <>
-      <main className="bg-tertiary">
-        <ImageUploader />
-      </main>
-    </>
+    <main className="bg-tertiary">
+      <ImageUploader />
+    </main>
   );
 }
 

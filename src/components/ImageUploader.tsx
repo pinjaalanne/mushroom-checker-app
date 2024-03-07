@@ -1,8 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ImageUploadInput from "../components/ImageUploadInput";
 import ImageList from "../components/ImageList";
 import { useModel } from "../library/ModelContext";
-import React from "react";
 import { ClassPrediction, UploadedImage } from "../types/customedTypes";
 
 
@@ -33,9 +32,9 @@ export default function ImageUploader() {
     const maxFloatValue = Math.max(
       ...predictions.map((obj) => obj.probability)
     );
-  
+
     // Map predictions to custom class prediction format
-     const predictionData: ClassPrediction[] = predictions.map((p) => ({
+    const predictionData: ClassPrediction[] = predictions.map((p) => ({
       className: p.className,
       probability: p.probability === maxFloatValue ? p.probability : 0,
     }));
@@ -44,7 +43,7 @@ export default function ImageUploader() {
     setImageUploaded(false);
   };
 
-    // Function to handle the change event when a user selects images for upload
+  // Function to handle the change event when a user selects images for upload
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files && files.length > 0) {

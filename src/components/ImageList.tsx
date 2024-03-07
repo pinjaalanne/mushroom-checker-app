@@ -54,9 +54,9 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
         carouselActivate ? (
         <Carousel images={predictionImages} />
       ) : (
-        predictionImages?.map((image, index) => (
+        predictionImages?.map((image) => (
           <div
-            key={index}
+            key={image.url}
             className="flex relative flex-col items-center pb-8 bg-primary justify-center border border-gray-300 active:scale-90 transition duration-150"
           >
             {image && (
@@ -69,7 +69,7 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
                   className="max-h-[250px] object-contain"
                 />
 
-                {image.predictions.map((item, index) => {
+                {image.predictions.map((item) => {
                   if (item.probability !== 0) {
                     const matchingData = data.find(
                       (data) => data.name === item.className
@@ -78,7 +78,7 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
 
                       <div
                         className={`flex items-center absolute bottom-0 justify-center w-full`}
-                        key={index}
+                        key={item.className}
                       >
                         <p className="text-lg font-bold">
                           <span className="text-[#fff]">

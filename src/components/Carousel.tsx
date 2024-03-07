@@ -1,7 +1,7 @@
 import React from "react";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { Options, Splide, SplideSlide } from "@splidejs/react-splide"; 
+import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
 import Image from "react-bootstrap/Image";
 import { ImageListProps } from "../types/customedTypes";
 
@@ -22,9 +22,9 @@ const Carousel: React.FC<ImageListProps> = ({ images }) => {
   return (
     <div className="">
       <div className="mx-auto">
-        <Splide options={options}> 
-          {images.map((image, index) => (
-            <SplideSlide key={index}>
+        <Splide options={options}>
+          {images.map((image) => (
+            <SplideSlide key={image.url}>
               <div className="flex cursor-pointer relative h-[100%] max-w-[90vw] mx-auto flex-col items-center pb-8 bg-primary justify-center border border-gray-300 active:scale-90 transition duration-150">
                 {image && (
                   <>
@@ -35,17 +35,16 @@ const Carousel: React.FC<ImageListProps> = ({ images }) => {
                       height={400}
                       className="max-h-[300px] object-contain"
                     />
-                    {image.predictions.map((item, index) => {
+                    {image.predictions.map((item) => {
                       if (item.probability !== 0) {
                         return (
                           <div
                             className={`flex items-center absolute bottom-0 justify-center w-full`}
-                            key={index}
+                            key={item.className}
                           >
                             <p className="text-lg font-bold">
                               <span className="text-[#fff]">
-                                {item.className} 
-                             
+                                {item.className}
                               </span>
                             </p>
                           </div>
