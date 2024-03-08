@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         <Link to={"/"}>
           <Image alt="no logo" src={logo} width={200} height={"auto"} />
         </Link>
-        <Link to={"/about"} className="font-sans text-lg text-quaternary font-semibold hover:underline">
+        <Link to={"/about"} className="font-sans text-quaternary font-semibold hover:underline">
           <h2>About</h2>
         </Link>
       </div>
