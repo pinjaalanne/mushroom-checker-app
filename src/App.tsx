@@ -3,10 +3,10 @@ import Layout from "./components/Layout";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home";
-import Mushroom from "./Mushroom";
+import Mushroom from "./pages/Mushroom";
 import About from "./pages/About";
 
-const App : React.FC = () => {
+const App: React.FC = () => {
   const router = createBrowserRouter([
     {
       element: <Layout />,

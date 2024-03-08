@@ -10,7 +10,9 @@ export default {
         primary: '#543D3D',
         secondary: '#c5afaf',
         tertiary: '#7f6767',
+        quaternary: "#FFF2EB"
       },
+      fontFamily: "DM Sans",
     },
   },
   plugins: [],
