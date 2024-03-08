@@ -17,14 +17,14 @@ export default function Layout() {
     <>
       {isLoading ? (
         <div className="flex justify-center items-center h-screen">
-          <MoonLoader color="red" />
+          <MoonLoader color="brown" />
         </div>
       ) : (
         <div
           className={`bg-primary scroll-smooth flex flex-col min-h-screen min-w-screen ${"fade-in"}`}
         >
           <Header />
-          <main className="bg-secondary flex-grow my-8 max-w-[1600px] mx-auto">
+          <main className="bg-secondary rounded-md flex-grow my-8 max-w-[1600px] mx-auto">
             <Outlet />
           </main>
           <Footer />

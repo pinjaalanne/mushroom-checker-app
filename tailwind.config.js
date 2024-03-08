@@ -12,7 +12,11 @@ export default {
         tertiary: '#7f6767',
         quaternary: "#FFF2EB"
       },
-      fontFamily: "DM Sans",
+      fontFamily: {
+        sans: ['Dm Sans', 'ui-sans-serif', 'system-ui'],
+        display: ['Oswald'],
+        body: ['Open Sans'],
+      }
     },
   },
   plugins: [],

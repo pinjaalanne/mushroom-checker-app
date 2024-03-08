@@ -4,6 +4,7 @@ import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
 import Image from "react-bootstrap/Image";
 import { ImageListProps } from "../types/customedTypes";
+import { Link } from "react-router-dom";
 
 const options: Options = {
   perPage: 1,
@@ -25,16 +26,17 @@ const Carousel: React.FC<ImageListProps> = ({ images }) => {
         <Splide options={options}>
           {images.map((image) => (
             <SplideSlide key={image.url}>
-              <div className="flex cursor-pointer relative h-[100%] max-w-[90vw] mx-auto flex-col items-center pb-8 bg-primary justify-center border border-gray-300 active:scale-90 transition duration-150">
+              <div className="flex cursor-pointer relative h-[100%] max-w-[90vw] mx-auto flex-col items-center pb-8 bg-quaternary justify-center border border-brown-300 active:scale-90 transition duration-150">
                 {image && (
-                  <>
-                    <Image
-                      src={image.url}
-                      alt={image.name}
-                      width={400}
-                      height={400}
-                      className="max-h-[300px] object-contain"
-                    />
+                  <>"
+                    <Link to={`${matchingData?.name}`}>
+                      <Image
+                        src={image.url}
+                        alt={image.name}
+                        width={200}
+                        height={200}
+                        className="max-h-[300px] object-contain"
+                      /></Link>
                     {image.predictions.map((item) => {
                       if (item.probability !== 0) {
                         return (
@@ -43,7 +45,7 @@ const Carousel: React.FC<ImageListProps> = ({ images }) => {
                             key={item.className}
                           >
                             <p className="text-lg font-bold">
-                              <span className="text-[#fff]">
+                              <span className="text-primary mb-14">
                                 {item.className}
                               </span>
                             </p>
@@ -58,7 +60,7 @@ const Carousel: React.FC<ImageListProps> = ({ images }) => {
           ))}
         </Splide>
       </div>
-    </div>
+    </div >
   );
 };
 
