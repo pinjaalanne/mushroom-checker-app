@@ -1,13 +1,11 @@
-import Image from "react-bootstrap/Image";
 import React, { useEffect, useState } from "react";
 import Carousel from "./Carousel";
 import ToggleButton from "./ToggleButton";
 import data from "../data/data"
 import { UploadedImage, ImageListProps } from "../types/customedTypes";
 import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
-
-
+import { Button, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 
 const ImageList: React.FC<ImageListProps> = ({ images }) => {
   const [predictionImages, setPredictionImages] = useState<UploadedImage[]>([]);
@@ -41,10 +39,10 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
   }, [images]);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
       {predictionImages && predictionImages.length >= 2 && isMobile && (
         <div className="flex justify-end items-center max-w-[85vw]">
-          <span className="text-slate-300 mr-4">Carousel View</span>
+          <span className="text-quaternary mr-4">Carousel View</span>
           <ToggleButton value={carouselActivate} onClick={onCarouselActivate} />
         </div>
       )}
@@ -55,18 +53,18 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
         <Carousel images={predictionImages} />
       ) : (
         predictionImages?.map((image) => (
-          <div
+          <Card
+            sx={{ bgcolor: "#FFF2EB", margin: "1rem", padding: "1rem" }}
             key={image.url}
-            className="flex relative flex-col items-center pb-8 bg-primary justify-center border border-gray-300 active:scale-90 transition duration-150"
+            className="bg-primary flex relative flex-col items-center justify-center border-radius-10 border-brown-300"
           >
             {image && (
               <>
-                <Image
-                  src={image.url}
-                  alt={image.name}
-                  width={400}
-                  height={400}
-                  className="max-h-[250px] object-contain"
+                <CardMedia
+                  component="img"
+                  sx={{ maxHeight: "200px", margin: "0", objectFit: "contain" }}
+                  image={image.url}
+                  alt="Mushroom image"
                 />
 
                 {image.predictions.map((item) => {
@@ -75,27 +73,34 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
                       (data) => data.name === item.className
                     );
                     return (
+                      <Box sx={{ display: "flex", flexDirection: "column" }}>
+                        <CardContent sx={{ flex: "1 0 auto" }}>
+                          <Box
+                            className={`flex items-center bottom-0 justify-center`}
+                            key={item.className}
+                          >
+                            <div className="text-center text-lg text-quarfont-bold">
+                              <span className="text-primary">
+                                <Typography>
+                                  {matchingData?.name}
+                                  <span className="text-primary italic">({matchingData?.scientificName})</span>
+                                </Typography>
 
-                      <div
-                        className={`flex items-center absolute bottom-0 justify-center w-full`}
-                        key={item.className}
-                      >
-                        <p className="text-lg font-bold">
-                          <span className="text-[#fff]">
-                            <p>{matchingData?.name} <span className="italic">({matchingData?.scientificName})</span></p>
-
-                            <Link to={`${matchingData?.name}`}>
-                              <Button sx={{ backgroundColor: '#d7c8c0', color: '#48362c', ":hover": { backgroundColor: '#a28778' } }}>Learn More</Button>
-                            </Link>
-                          </span>
-                        </p>
-                      </div>
+                                <Link to={`${matchingData?.name}`}>
+                                  <Button sx={{ marginTop: "1rem", backgroundColor: '#d7c8c0', color: '#48362c', ":hover": { backgroundColor: '#a28778' } }}>Learn More</Button>
+                                </Link>
+                              </span>
+                            </div>
+                          </Box>
+                        </CardContent>
+                      </Box>
                     );
                   }
                 })}
               </>
-            )}
-          </div>
+            )
+            }
+          </Card>
         ))
       )}
     </div>

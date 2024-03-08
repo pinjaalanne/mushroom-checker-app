@@ -3,9 +3,9 @@ import React from "react";
 
 const Home: React.FC = () => {
   return (
-    <main className="bg-tertiary">
+    <div className="bg-tertiary">
       <ImageUploader />
-    </main>
+    </div>
   );
 }
 

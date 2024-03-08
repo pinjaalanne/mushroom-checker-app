@@ -10,7 +10,13 @@ export default {
         primary: '#543D3D',
         secondary: '#c5afaf',
         tertiary: '#7f6767',
+        quaternary: "#FFF2EB"
       },
+      fontFamily: {
+        sans: ['Dm Sans', 'ui-sans-serif', 'system-ui'],
+        display: ['Oswald'],
+        body: ['Open Sans'],
+      }
     },
   },
   plugins: [],

@@ -11,7 +11,7 @@ const ImageUploadInput: React.FC<ImageUploadProps> = ({ handleImageUpload }) => 
         type="file"
         accept="image/*"
         onChange={handleImageUpload}
-        className="block w-full text-sm text-slate-500
+        className="rounded-3xl text-primary block w-full text-sm
         file:mr-5 file:py-2 file:px-4
         lg:file:mr-6 lg:file:py-3 lg:file:px-5
         file:rounded-full file:border-0
