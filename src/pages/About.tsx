@@ -13,7 +13,7 @@ const About: React.FC = () => {
       <h3>Contributors Team 4:</h3>
       <ul className="about-list">
       <li>Pinja Alanne</li>
-      <li>George</li>
+      <li>George Uzoh</li>
       <li>Mychel Garzon</li>  
       </ul>
       <h3>Tools</h3>
