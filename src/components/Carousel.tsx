@@ -4,7 +4,6 @@ import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
 import Image from "react-bootstrap/Image";
 import { ImageListProps } from "../types/customedTypes";
-import { Link } from "react-router-dom";
 
 const options: Options = {
   perPage: 1,
