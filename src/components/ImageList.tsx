@@ -87,7 +87,7 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
                                 </Typography>
 
                                 <Link to={`${matchingData?.name}`}>
-                                  <Button sx={{ marginTop: "1rem", backgroundColor: '#d7c8c0', color: '#48362c', ":hover": { backgroundColor: '#a28778' } }}>Learn More</Button>
+                                  <Button sx={{ marginTop: "1rem", backgroundColor: '#e2cec4', color: '#48362c', ":hover": { backgroundColor: '#a28778' } }}>Learn More</Button>
                                 </Link>
                               </span>
                             </div>

@@ -17,7 +17,7 @@ const ImageUploadInput: React.FC<ImageUploadProps> = ({ handleImageUpload }) => 
         file:rounded-full file:border-0
         file:text-sm file:font-semibold
         file:cursor-pointer
-        file:bg-primary file:text-white
+        file:bg-[#e2cec4] file:text-primary
         file:active:scale-90 file:transition file:duration-150
         cursor-pointer
     "></input>
