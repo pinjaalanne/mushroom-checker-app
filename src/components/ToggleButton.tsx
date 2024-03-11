@@ -17,7 +17,7 @@ const ToggleButton: React.FC<Props> = ({ value, onClick }: Props) => {
       p-1 cursor-pointer `}
     >
       <div
-        className={`bg-primary h-6
+        className={`bg-tertiary h-6
           w-6 rounded-full shadow-md transition transform${value ? toggleClass : null
           }`}
       ></div>
