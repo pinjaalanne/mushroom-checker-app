@@ -33,7 +33,7 @@ const About: React.FC = () => {
               variant="subtitle2"
               color="#543D3D"
               component="div"
-              sx={{ margin: "0.5rem 5rem" }}
+              sx={{ margin: "0.5rem 1rem" }}
             >
               This project was created as an assignment typeScript class at <Link className="hover:underline text-secondary" to="https://www.bc.fi">Business College Helsinki,</Link> REACT23S Full Stack Web Developer program.
             </Typography>
@@ -41,7 +41,7 @@ const About: React.FC = () => {
               variant="subtitle2"
               color="#543D3D"
               component="div"
-              sx={{ margin: "0.5rem" }}
+              sx={{ margin: "0.5rem 1rem" }}
             >
               This application is a web-based tool that uses a machine learning model to classify mushrooms images uploaded by the user.
             </Typography>

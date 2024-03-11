@@ -22,7 +22,7 @@ const Mushroom: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <Card sx={{ margin: "2rem", padding: "0.5rem", maxHeight: isMobile ? "" : "70vh", display: "flex", flexDirection: isMobile ? "column" : "row" }}>
+    <Card sx={{ background: "#FFF2EB", color: "#543D3D", margin: "0 2rem 0 2rem", padding: "0.5rem", maxHeight: isMobile ? "" : "70vh", display: "flex", flexDirection: isMobile ? "column" : "row" }}>
       <CardMedia
         component="img"
         sx={{ maxHeight: isMobile ? "250px" : "380px", margin: "1rem 0 1rem 0", objectFit: "contain" }}
@@ -31,7 +31,7 @@ const Mushroom: React.FC = () => {
       />
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <CardContent sx={{ flex: "1 0 auto", textAlign: "center" }}>
-          <Typography component="div" variant="subtitle1" sx={{ marginBottom: "0.8rem" }}>
+          <Typography component="div" variant="subtitle1" sx={{ marginBottom: "0.8rem", fontWeight: 600 }}>
             {mushroomData?.name}{" "}
             <span className="italic">({mushroomData?.scientificName})</span>
           </Typography>
@@ -39,6 +39,7 @@ const Mushroom: React.FC = () => {
             variant="subtitle2"
             color="text.secondary"
             component="div"
+            sx={{ fontWeight: "600" }}
           >
             Description:
           </Typography>
@@ -53,6 +54,7 @@ const Mushroom: React.FC = () => {
             variant="subtitle2"
             color="text.secondary"
             component="div"
+            sx={{ fontWeight: "600" }}
           >
             Occurence:
           </Typography>
@@ -67,6 +69,7 @@ const Mushroom: React.FC = () => {
             variant="subtitle2"
             color="text.secondary"
             component="div"
+            sx={{ fontWeight: "600" }}
           >
             Picking months:
           </Typography>
@@ -81,6 +84,7 @@ const Mushroom: React.FC = () => {
             variant="subtitle2"
             color="text.secondary"
             component="div"
+            sx={{ fontWeight: "600" }}
           >
             Primary habitat:
           </Typography>
@@ -95,6 +99,7 @@ const Mushroom: React.FC = () => {
             variant="subtitle2"
             color="text.secondary"
             component="div"
+            sx={{ fontWeight: "600" }}
           >
             Edible:
           </Typography>
@@ -109,6 +114,7 @@ const Mushroom: React.FC = () => {
             variant="subtitle2"
             color="text.secondary"
             component="div"
+            sx={{ fontWeight: "600" }}
           >
             Recipes:
           </Typography>
