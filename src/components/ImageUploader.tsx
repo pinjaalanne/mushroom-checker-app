@@ -69,7 +69,7 @@ export default function ImageUploader() {
 
   return (
     <div className="max-w-[90vw] lg:max-w-[80vw] mx-auto">
-      <h1 className="font-sans text-quaternary font-semibold my-6 text-[1.6rem] lg:w-[70vw] max-w-[1250px] mx-3 lg:leading-snug md:text-3xl lg:text-3xl md:my-8 pt-2 lg:mt-14 lg:mb- text-center">
+      <h1 className="font-sans text-quaternary font-semibold my-6 text-[1.6rem] lg:w-[70vw] max-w-[1250px] mx-3 lg:leading-snug md:text-3xl lg:text-4xl md:my-8 pt-2 lg:mt-14 lg:mb- text-center">
         Identify Your Mushrooms with Machine Learning
       </h1>
       <div>

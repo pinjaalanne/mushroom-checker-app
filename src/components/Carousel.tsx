@@ -28,14 +28,12 @@ const Carousel: React.FC<ImageListProps> = ({ images }) => {
               <div className="flex cursor-pointer relative h-[100%] max-w-[90vw] mx-auto flex-col items-center pb-8 bg-quaternary justify-center border border-brown-300 active:scale-90 transition duration-150">
                 {image && (
                   <>
-                    {/* <Link to={`${matchingData?.name}`}> */}
                     <Image
                       src={image.url}
                       alt={image.name}
                       width={250}
                       height={250}
                       className="max-h-[300px] object-contain my-2" />
-                    {/* // </Link> */}
                     {image.predictions.map((item) => {
                       if (item.probability !== 0) {
                         return (
