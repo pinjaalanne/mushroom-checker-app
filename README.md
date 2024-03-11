@@ -1,16 +1,43 @@
 # Mushroom checker
+
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=pinjaalanne_mushroom-checker-app&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=pinjaalanne_mushroom-checker-app)
 
-## App for user to recognise different mushroom types
+Mushroom checker is a web-based application that is used to classify and identify mushroom species uploaded by the user.
 
-## MVP:
+## How it works
 
-- Landing page: A picture of a mushroom and a button to show all mushrooms
+The app was taught how to recognize several mushroom species with the help of a machine learning tool called Teachable Machine.
 
-- All mushrooms page: List of different mushrooms and a searchbar/checkbox to filter different mushrooms (for example by color)
+When a user uploads an image of a mushroom species, the app scans the database to identify the species. As soon as the app finds a mushroom species in the database that matches the user's upload, it displays that item.
 
-- Single page for a mushroom with image, description, poisonous: true/false, recipes/link for recipes
+Furthermore, the user can click on "View more" to see additional information related to the mushroom.
 
-- Compare 10 different mushrooms
+## Technologies
 
-- Create own data for the mushrooms
+- React
+- TypeScript
+- Material UI
+- Tailwind CSS
+- SonarQube
+
+## How to run the app locally
+
+If you wish to run the app locally, you can do so by performing the following actions:
+
+- Install node package
+
+```shell
+npm install
+```
+
+- Run the app
+
+```shell
+npm run dev
+```
+
+## Contributors
+
+- <a href="https://github.com/pinjaalanne">Pinja Alanne</a>
+- <a href="https://github.com/mychelgarzon">Mychel Garzon</a>
+- <a href="https://github.com/G-Uzoh">George Uzoh</a>
