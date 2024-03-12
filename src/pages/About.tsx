@@ -16,12 +16,6 @@ const About: React.FC = () => {
               About
             </Typography>
             <Typography
-              color="#543D3D"
-              component="div"
-              sx={{ margin: "1rem", fontSize: "1.4rem", fontWeight: "600" }}
-            >Mushroom Checker App
-            </Typography>
-            <Typography
               variant="h6"
               color="#543D3D"
               component="div"
